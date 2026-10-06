@@ -15,12 +15,12 @@ export default function HomePage() {
         <div id="analytics">
           <SolarAnalyticsHero />
         </div>
-        <AboutSection />
-        <ServicesSection />
-        <WhyChooseSunpermitSection />
         <div id="pricing">
           <InteractiveRoiCalculator />
         </div>
+        <AboutSection />
+        <ServicesSection />
+        <WhyChooseSunpermitSection />
         <ContactSection />
       </main>
       <Footer />
