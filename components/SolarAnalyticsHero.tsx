@@ -107,9 +107,9 @@ export default function SolarAnalyticsHero() {
               transition={{ duration: 0.6 }}
               className="text-5xl sm:text-6xl xl:text-[64px] font-extrabold tracking-tight text-slate-950 leading-[1.08]"
             >
-              Understand<br />
-              Your Solar Data<br />
-              in Seconds
+              Order <br />
+               solar design<br />
+           & engineering services
             </motion.h1>
 
             {/* Subtitle */}
@@ -119,7 +119,7 @@ export default function SolarAnalyticsHero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-slate-800 text-base sm:text-lg font-normal leading-relaxed max-w-md"
             >
-              Track sunlight, optimize your energy output, and make smarter solar decisions — all in one sleek, user-friendly dashboard.
+              Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly..
             </motion.p>
 
             {/* CTA Buttons */}
