@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import SunPermitLogo from "@/components/SunPermitLogo";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   Building2,
@@ -69,42 +70,7 @@ export default function QuickOrderPage() {
   return (
     <div className="min-h-screen bg-[#FAF7F2] text-slate-900 flex flex-col selection:bg-orange-500 selection:text-white">
       
-      {/* ─── Top Floating Header with SunPermit Logo (Matches Screenshot 2) ─── */}
-      <header className="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          
-          {/* Official Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <SunPermitLogo height={38} />
-          </Link>
-
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-            <Link href="/#about" className="hover:text-orange-600 transition-colors">About Us</Link>
-            <Link href="/#services" className="hover:text-orange-600 transition-colors">Services</Link>
-            <Link href="/#pricing" className="hover:text-orange-600 transition-colors">Pricing Calculator</Link>
-            <Link href="/#contact" className="hover:text-orange-600 transition-colors">Contact Us</Link>
-            <Link href="/track-permit" className="hover:text-orange-600 transition-colors">My Account</Link>
-          </nav>
-
-          {/* Right Action */}
-          <div className="flex items-center gap-3">
-            <Link
-              href="/track-permit"
-              className="hidden sm:inline-flex text-xs font-semibold text-slate-700 hover:text-slate-950 px-3 py-2"
-            >
-              Track Order
-            </Link>
-            <Link
-              href="/request-permit"
-              className="bg-slate-950 hover:bg-slate-800 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all shadow-xs"
-            >
-              Order Planset
-            </Link>
-          </div>
-
-        </div>
-      </header>
+      <Navbar />
 
       {/* ─── Main Content ─── */}
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
