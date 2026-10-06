@@ -25,7 +25,6 @@ export default function Navbar() {
     { label: "Pricing Calculator", href: "/#pricing" },
     { label: "Contact Us", href: "/#contact" },
     { label: "Quick Hub", href: "/quick" },
-    { label: "My Account", href: "/track-permit" },
   ];
 
   return (
