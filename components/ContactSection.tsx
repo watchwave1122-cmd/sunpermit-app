@@ -144,103 +144,13 @@ Engineer?
               transition={{ duration: 0.7 }}
               className="relative w-full"
             >
-              {/* Sleek Tablet Frame */}
-              <div className="relative rounded-[32px] p-3 sm:p-4 bg-gradient-to-b from-slate-800 to-slate-950 shadow-[0_25px_70px_rgba(0,0,0,0.5)] border border-slate-700/60">
-                
-                {/* Screen (Light Theme as shown in Screenshot 1) */}
-                <div className="rounded-[22px] bg-[#F8FAFC] text-slate-900 overflow-hidden border border-slate-200 shadow-inner">
-                  
-                  {/* Dashboard Top Header */}
-                  <div className="flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-200/80 text-[11px] text-slate-600">
-                    <div className="flex items-center gap-1.5 font-medium">
-                      <span className="text-slate-700">Dashboard</span>
-                      <span className="text-slate-400">&gt;</span>
-                      <span className="text-slate-400">...</span>
-                      <span className="text-slate-400">&gt;</span>
-                      <span className="text-orange-600 font-bold">Solar analysis</span>
-                    </div>
-                    
-                    <div className="relative">
-                      <Search className="w-3 h-3 absolute left-2 top-1/2 -translate-y-1/2 text-slate-400" />
-                      <input
-                        type="text"
-                        readOnly
-                        placeholder="Search"
-                        className="bg-slate-100 border border-slate-200 rounded-md pl-6 pr-2 py-0.5 text-[10px] text-slate-700 placeholder-slate-400 w-24 cursor-default"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Dashboard Content Container */}
-                  <div className="p-4 space-y-3.5 bg-slate-50/60">
-                    
-                    {/* Overview Card (Light Theme) */}
-                    <div className="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
-                      <h4 className="text-[11px] font-bold text-slate-900 mb-2.5 tracking-wide">Overview</h4>
-                      <div className="space-y-2 text-[10px]">
-                        <div className="flex items-start gap-2">
-                          <MapPin className="w-3.5 h-3.5 text-slate-500 mt-0.5 shrink-0" />
-                          <div>
-                            <p className="text-[9px] text-slate-400 uppercase tracking-wider">Address</p>
-                            <p className="text-slate-900 font-bold">123 Solar Street, Sunnytown</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <Compass className="w-3.5 h-3.5 text-slate-500 mt-0.5 shrink-0" />
-                          <div>
-                            <p className="text-[9px] text-slate-400 uppercase tracking-wider">GPS Coordinates</p>
-                            <p className="text-slate-900 font-bold">40.7128° N, 74.0060° W</p>
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2 pt-1.5 border-t border-slate-100">
-                          <div>
-                            <p className="text-[9px] text-slate-400 uppercase tracking-wider">Time Zone</p>
-                            <p className="text-slate-900 font-semibold">EDT (UTC -4)</p>
-                          </div>
-                          <div>
-                            <p className="text-[9px] text-slate-400 uppercase tracking-wider">Roof Surface Area</p>
-                            <p className="text-slate-900 font-semibold">250 m²</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Solar Energy Potential Card */}
-                    <div className="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-[11px] font-bold text-slate-900 tracking-wide">Solar Energy Potential</h4>
-                        <div className="flex items-center gap-0.5 bg-slate-100 p-0.5 rounded-md border border-slate-200 text-[8px]">
-                          <span className="px-1.5 py-0.5 text-slate-500">Daily</span>
-                          <span className="px-1.5 py-0.5 text-slate-500">Weekly</span>
-                          <span className="px-1.5 py-0.5 bg-white text-slate-950 font-bold rounded shadow-xs">Monthly</span>
-                          <span className="px-1.5 py-0.5 text-slate-500">Yearly</span>
-                        </div>
-                      </div>
-
-                      {/* Equalizer Histogram */}
-                      <div className="py-1">
-                        <div className="flex items-end justify-between gap-1 h-9 px-1">
-                          {[25, 30, 45, 60, 80, 95, 85, 65, 50, 35, 25, 20, 40, 55, 75, 95, 100, 85, 70, 50].map((h, i) => (
-                            <div
-                              key={i}
-                              style={{ height: `${h}%` }}
-                              className={`w-1 rounded-t-sm ${
-                                i >= 14 && i <= 17 ? "bg-slate-900" : "bg-slate-300"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                        <div className="flex justify-between text-[8px] text-slate-500 px-1 mt-1 border-t border-slate-100 pt-0.5">
-                          <span>April - 156 kWh</span>
-                          <span className="text-orange-600 font-bold">May - 186 kWh</span>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
+              {/* Dashboard Image (Matches Screenshot Exactly) */}
+              <div className="relative rounded-[28px] overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.5)] border border-slate-700/60 bg-white">
+                <img
+                  src="/images/hero-dashboard-white.jpg"
+                  alt="Solar Analysis Dashboard"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </motion.div>
           </div>
