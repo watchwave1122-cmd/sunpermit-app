@@ -110,6 +110,7 @@ export async function POST(req: Request) {
     const adminRecipients = [
       "shahzaibshahid18@gmail.com",
       "rana@sunpermit.com",
+      "fatima@techsaker.com",
     ];
 
     await Promise.all([

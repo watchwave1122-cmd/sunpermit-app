@@ -212,11 +212,12 @@ export async function POST(req: Request) {
       </html>
     `;
 
-    // All three admin recipients receive every permit planset order
+    // All admin recipients receive every permit planset order
     const adminRecipients = [
       "support@sunpermit.odoo.com",
       "shahzaibshahid18@gmail.com",
       "rana@sunpermit.com",
+      "fatima@techsaker.com",
     ];
 
     const emailTargets = [
