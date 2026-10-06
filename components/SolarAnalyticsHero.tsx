@@ -426,91 +426,51 @@ export default function SolarAnalyticsHero() {
 
         </div>
 
-        {/* ─── Bottom Accreditation Logos Row — Pure Dark Grey Transparent Vector SVGs (Enlarged) ─── */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-12 sm:gap-20 opacity-85 hover:opacity-100 transition-opacity text-slate-700">
-          {/* 1. NABCEP Certified PV Installation Professional */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 140 70" className="h-14 sm:h-16 w-auto fill-current text-slate-700">
-              {/* Starburst badge top arc */}
-              <path d="M25,38 C23,32 25,24 30,18 C36,11 46,7 55,5 C65,3 75,3 85,5 C94,7 104,11 110,18 C115,24 117,32 115,38 Z" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="3,2" />
-              <text x="70" y="24" textAnchor="middle" fontSize="10" fontWeight="900" letterSpacing="0.8">NABCEP</text>
-              {/* Solid pill banner with cutout/white text */}
-              <rect x="20" y="28" width="100" height="15" rx="2" fill="currentColor" />
-              <text x="70" y="39.5" textAnchor="middle" fontSize="9.5" fontWeight="900" fill="white" letterSpacing="1.2">CERTIFIED</text>
-              <line x1="26" y1="47" x2="114" y2="47" stroke="currentColor" strokeWidth="1.5" />
-              <text x="70" y="55" textAnchor="middle" fontSize="6.5" fontWeight="700">PV Installation</text>
-              <text x="70" y="63" textAnchor="middle" fontSize="6.5" fontWeight="700">Professional</text>
-            </svg>
+        {/* ─── Bottom Accreditation Logos Row — Official Logos Uploaded by User ─── */}
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-10 sm:gap-16 opacity-90 hover:opacity-100 transition-opacity">
+          {/* 1. NABCEP */}
+          <div className="h-12 sm:h-16 flex items-center justify-center">
+            <img
+              src="/images/accreditations/nabcep-official.png"
+              alt="NABCEP Certified PV Installation Professional"
+              className="h-full w-auto object-contain mix-blend-multiply"
+            />
           </div>
 
-          {/* 2. LG Chem Certified Installer RESU Gen2 */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 90" className="h-16 sm:h-20 w-auto text-slate-700">
-              {/* Outer circular badge border */}
-              <circle cx="45" cy="45" r="41" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="45" cy="38" r="37" fill="none" stroke="currentColor" strokeWidth="0.8" />
-              {/* Top and bottom curved text representation */}
-              <text x="45" y="19" textAnchor="middle" fontSize="5.5" fontWeight="700" fill="currentColor" letterSpacing="0.5">LG HOME BATTERY</text>
-              <text x="45" y="28" textAnchor="middle" fontSize="6" fontWeight="900" fill="currentColor">LG Chem</text>
-              {/* Middle banner */}
-              <rect x="5" y="36" width="80" height="16" fill="currentColor" rx="1" />
-              <text x="45" y="44" textAnchor="middle" fontSize="6.5" fontWeight="900" fill="white" letterSpacing="0.5">CERTIFIED</text>
-              <text x="45" y="50" textAnchor="middle" fontSize="5.5" fontWeight="800" fill="white" letterSpacing="0.4">INSTALLER</text>
-              {/* Bottom text */}
-              <text x="45" y="60" textAnchor="middle" fontSize="5" fontWeight="700" fill="currentColor">RESU Gen2</text>
-              <text x="45" y="76" textAnchor="middle" fontSize="5.5" fontWeight="700" fill="currentColor" letterSpacing="0.5">LG HOME BATTERY</text>
-            </svg>
+          {/* 2. LG Chem */}
+          <div className="h-12 sm:h-16 flex items-center justify-center">
+            <img
+              src="/images/accreditations/lg-chem-official.png"
+              alt="LG Chem Certified Installer RESU Gen2"
+              className="h-full w-auto object-contain mix-blend-multiply"
+            />
           </div>
 
-          {/* 3. ENPHASE Logo */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 50" className="h-12 sm:h-14 w-auto text-slate-700 fill-none stroke-currentColor">
-              {/* Enphase circular stylized 'e' icon */}
-              <circle cx="45" cy="18" r="14" strokeWidth="3" />
-              <line x1="31" y1="18" x2="59" y2="18" strokeWidth="3" />
-              {/* Text label */}
-              <text x="45" y="44" textAnchor="middle" fontSize="9" fontWeight="900" fill="currentColor" stroke="none" letterSpacing="2">ENPHASE</text>
-            </svg>
+          {/* 3. EverVolt */}
+          <div className="h-10 sm:h-14 flex items-center justify-center">
+            <img
+              src="/images/accreditations/evervolt-official.png"
+              alt="EverVolt Certified Installer"
+              className="h-full w-auto object-contain mix-blend-multiply"
+            />
           </div>
 
-          {/* 4. EverVolt Certified Installer Panasonic */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 140 50" className="h-12 sm:h-15 w-auto text-slate-700">
-              {/* Box frame */}
-              <rect x="2" y="2" width="136" height="46" fill="none" stroke="currentColor" strokeWidth="2.5" />
-              {/* EverVolt main text with lightning bolt representation */}
-              <g transform="translate(14, 25)">
-                <text x="0" y="0" fontSize="19" fontWeight="900" fill="currentColor" letterSpacing="-0.5">EverVo</text>
-                {/* stylized lightning bolt 'l' */}
-                <polygon points="62,-16 67,-16 64,-3 68,-3 59,8 62,-1 58,-1" fill="currentColor" />
-                <text x="69" y="0" fontSize="19" fontWeight="900" fill="currentColor">t</text>
-                <text x="77" y="-12" fontSize="5" fontWeight="bold" fill="currentColor">TM</text>
-              </g>
-              {/* Sub-bar */}
-              <rect x="2" y="32" width="136" height="16" fill="currentColor" />
-              <text x="70" y="44" textAnchor="middle" fontSize="8" fontWeight="800" fill="white" letterSpacing="1">CERTIFIED INSTALLER</text>
-            </svg>
+          {/* 4. Drone Pilot */}
+          <div className="h-12 sm:h-16 flex items-center justify-center">
+            <img
+              src="/images/accreditations/drone-pilot-official.png"
+              alt="InterNACHI Certified Drone Pilot Training"
+              className="h-full w-auto object-contain mix-blend-multiply"
+            />
           </div>
 
-          {/* 5. Drone Pilot Training */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 90" className="h-16 sm:h-20 w-auto text-slate-700 fill-none stroke-currentColor">
-              {/* Outer circular frame */}
-              <circle cx="45" cy="38" r="26" strokeWidth="2.5" />
-              {/* Drone center body */}
-              <circle cx="45" cy="38" r="4.5" strokeWidth="2" fill="currentColor" />
-              {/* 4 Drone arms */}
-              <line x1="37" y1="30" x2="53" y2="46" strokeWidth="2" />
-              <line x1="37" y1="46" x2="53" y2="30" strokeWidth="2" />
-              {/* 4 Propeller motors & guards */}
-              <circle cx="34" cy="27" r="4" strokeWidth="1.8" />
-              <circle cx="56" cy="27" r="4" strokeWidth="1.8" />
-              <circle cx="34" cy="49" r="4" strokeWidth="1.8" />
-              <circle cx="56" cy="49" r="4" strokeWidth="1.8" />
-              {/* Plaque / Text below */}
-              <text x="45" y="73" textAnchor="middle" fontSize="8" fontWeight="900" fill="currentColor" stroke="none" letterSpacing="0.8">DRONE PILOT</text>
-              <text x="45" y="82" textAnchor="middle" fontSize="6.5" fontWeight="700" fill="currentColor" stroke="none" letterSpacing="1.2">TRAINING</text>
-            </svg>
+          {/* 5. ENPHASE */}
+          <div className="h-10 sm:h-14 flex items-center justify-center">
+            <img
+              src="/images/accreditations/enphase-official.png"
+              alt="ENPHASE"
+              className="h-full w-auto object-contain mix-blend-multiply"
+            />
           </div>
         </div>
 
