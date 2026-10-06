@@ -125,12 +125,12 @@ export default function ContactSection() {
               transition={{ duration: 0.6 }}
               className="relative w-full"
             >
-              {/* Dashboard Tablet Window Frame Bezel */}
-              <div className="relative rounded-tl-[36px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.8)] border-l-4 border-t-4 border-slate-700/80 bg-white">
+              {/* Dashboard Tablet Preview from Screenshot 2 */}
+              <div className="relative overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.8)] rounded-tl-[32px] sm:rounded-tl-[40px]">
                 <img
                   src="/images/hero-dashboard-white.jpg"
                   alt="Solar Analysis Dashboard Preview"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover rounded-tl-[32px] sm:rounded-tl-[40px]"
                 />
               </div>
             </motion.div>

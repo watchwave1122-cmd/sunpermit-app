@@ -15,6 +15,8 @@ import {
   CheckCircle2,
   HelpCircle,
   LogOut,
+  Clock,
+  ShieldCheck,
 } from "lucide-react";
 
 export default function SolarAnalyticsHero() {
@@ -92,19 +94,19 @@ export default function SolarAnalyticsHero() {
         </nav>
       </header>
 
-      {/* ─── Main Hero Content: Space Between Layout (Left on Left, Right on Right) ─── */}
-      <main className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-12 xl:pl-16 pr-0 pt-12 lg:pt-16 pb-16 lg:pb-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
+      {/* ─── Main Hero Content: Exactly Matches Screenshot 3 Alignment & Placing ─── */}
+      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-16 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
-          {/* ─── Left Column: Aligned on the Left Side ─── */}
-          <div className="w-full lg:max-w-[480px] xl:max-w-[540px] shrink-0 flex flex-col justify-center space-y-7 text-left pr-4">
+          {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-7 text-left">
             
             {/* Main Headline */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl sm:text-5xl xl:text-[56px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
+              className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
             >
               Order solar design<br />
               &amp; engineering<br />
@@ -116,56 +118,56 @@ export default function SolarAnalyticsHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-slate-800 text-base sm:text-lg font-normal leading-relaxed max-w-lg"
+              className="text-slate-800 text-sm sm:text-base font-normal leading-relaxed max-w-lg"
             >
               Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-6 pt-2"
+              className="flex items-center gap-6 pt-1"
             >
               <Link
                 href="/quick"
-                className="bg-slate-950 hover:bg-slate-800 text-white text-base font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-slate-950/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="bg-slate-950 hover:bg-slate-800 text-white text-sm sm:text-base font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-slate-950/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Get started
               </Link>
             </motion.div>
 
-            {/* SunPermit Quick Feature Points (Matches Screenshot) */}
+            {/* SunPermit Quick Feature Points with Amber/Orange Icons from Screenshot 3 */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-800"
+              className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-slate-800"
             >
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> 24-Hr SLA Guarantee
+                <Clock className="w-4 h-4 text-orange-600" /> 24-Hr SLA Guarantee
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> 50-State PE Licensed
+                <ShieldCheck className="w-4 h-4 text-orange-600" /> 50-State PE Licensed
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> 99.8% AHJ Pass Rate
+                <CheckCircle2 className="w-4 h-4 text-orange-600" /> 99.8% AHJ Pass Rate
               </span>
             </motion.div>
 
           </div>
 
-          {/* ─── Right Column: Tablet Mockup Aligned on the Far Right Side (Overhanging / Flush Right) ─── */}
-          <div className="w-full lg:flex-1 flex justify-end overflow-visible">
+          {/* ─── Right Column: Black Dashboard Tablet Mockup (100% Matches Screenshot 3 Alignment) ─── */}
+          <div className="lg:col-span-7 flex justify-center lg:justify-end">
             <motion.div
-              initial={{ opacity: 0, scale: 0.96, y: 30 }}
+              initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[760px] xl:max-w-[840px] 2xl:max-w-[920px] translate-x-4 sm:translate-x-8 lg:translate-x-12"
+              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              className="relative w-full max-w-[680px] xl:max-w-[730px]"
             >
-              {/* Sleek Tablet Frame */}
-              <div className="relative rounded-[36px] rounded-r-none p-3 sm:p-4 pr-0 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.45)] border border-slate-700/60 border-r-0 ring-1 ring-white/10">
+              {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 3 */}
+              <div className="relative rounded-[36px] p-2.5 sm:p-3.5 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.5)] border border-slate-700/80 ring-1 ring-white/10">
                 
                 {/* Tablet Camera / Sensor Pill */}
                 <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-2 bg-slate-900 rounded-full flex items-center justify-center gap-2">
@@ -173,8 +175,8 @@ export default function SolarAnalyticsHero() {
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />
                 </div>
 
-                {/* Tablet Screen Container */}
-                <div className="relative rounded-[26px] rounded-r-none bg-[#0A0E1A] overflow-hidden border border-white/[0.06] border-r-0 text-slate-200">
+                {/* Tablet Screen Container with All 4 Rounded Corners */}
+                <div className="relative rounded-[26px] bg-[#0A0E1A] overflow-hidden border border-white/[0.08] text-slate-200">
                   
                   {/* Dashboard Top Bar */}
                   <div className="flex items-center justify-between px-4 py-2.5 bg-[#0D1322] border-b border-white/[0.06] text-[11px] text-slate-400">
