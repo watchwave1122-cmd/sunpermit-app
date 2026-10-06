@@ -94,12 +94,12 @@ export default function SolarAnalyticsHero() {
         </nav>
       </header>
 
-      {/* ─── Main Hero Content: Exactly Matches Screenshot 3 Alignment & Placing ─── */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-16 lg:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      {/* ─── Main Hero Content: Exactly Matches Screenshot 2 Alignment (Aligned Exact Right) ─── */}
+      <main className="relative z-10 w-full pl-4 sm:pl-8 lg:pl-12 xl:pl-16 pr-3 sm:pr-6 lg:pr-8 xl:pr-10 pt-10 sm:pt-14 pb-16 lg:pb-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
           
           {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-7 text-left">
+          <div className="w-full lg:max-w-[480px] xl:max-w-[530px] shrink-0 flex flex-col justify-center space-y-7 text-left">
             
             {/* Main Headline */}
             <motion.h1 
@@ -138,7 +138,7 @@ export default function SolarAnalyticsHero() {
               </Link>
             </motion.div>
 
-            {/* SunPermit Quick Feature Points with Amber/Orange Icons from Screenshot 3 */}
+            {/* SunPermit Quick Feature Points with Amber/Orange Icons from Screenshot */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -158,15 +158,15 @@ export default function SolarAnalyticsHero() {
 
           </div>
 
-          {/* ─── Right Column: Black Dashboard Tablet Mockup (100% Matches Screenshot 3 Alignment) ─── */}
-          <div className="lg:col-span-7 flex justify-center lg:justify-end">
+          {/* ─── Right Column: Black Dashboard Tablet Mockup Aligned Exact Right (Matches Screenshot 2) ─── */}
+          <div className="w-full lg:flex-1 flex justify-end items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[680px] xl:max-w-[730px]"
+              className="relative w-full max-w-[700px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[860px] ml-auto mr-0"
             >
-              {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 3 */}
+              {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 2 */}
               <div className="relative rounded-[36px] p-2.5 sm:p-3.5 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.5)] border border-slate-700/80 ring-1 ring-white/10">
                 
                 {/* Tablet Camera / Sensor Pill */}
@@ -429,7 +429,7 @@ export default function SolarAnalyticsHero() {
         </div>
 
         {/* ─── Bottom Accreditation Logos Row — 100% Exactly Matches Screenshot 1 ─── */}
-        <div className="mt-16 sm:mt-20 flex flex-wrap items-center justify-center gap-8 sm:gap-14 lg:gap-20 opacity-80 hover:opacity-100 transition-opacity">
+        <div className="mt-16 sm:mt-20 max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8 sm:gap-14 lg:gap-20 opacity-80 hover:opacity-100 transition-opacity">
           {/* 1. NABCEP */}
           <div className="h-12 sm:h-16 flex items-center justify-center">
             <img
