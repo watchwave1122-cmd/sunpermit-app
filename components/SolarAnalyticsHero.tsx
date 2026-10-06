@@ -94,22 +94,22 @@ export default function SolarAnalyticsHero() {
       </header>
 
       {/* ─── Main Hero Content: Space Between Layout (Left on Left, Right on Right) ─── */}
-      <main className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 pt-12 lg:pt-16 pb-16 lg:pb-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 xl:gap-16">
+      <main className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-12 xl:pl-16 pr-0 pt-12 lg:pt-16 pb-16 lg:pb-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
           
           {/* ─── Left Column: Aligned on the Left Side ─── */}
-          <div className="w-full lg:max-w-[480px] xl:max-w-[540px] shrink-0 flex flex-col justify-center space-y-7 text-left">
+          <div className="w-full lg:max-w-[480px] xl:max-w-[540px] shrink-0 flex flex-col justify-center space-y-7 text-left pr-4">
             
             {/* Main Headline */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl sm:text-6xl xl:text-[64px] font-extrabold tracking-tight text-slate-950 leading-[1.08]"
+              className="text-4xl sm:text-5xl xl:text-[56px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
             >
-              Understand<br />
-              Your Solar Data<br />
-              in Seconds
+              Order solar design<br />
+              &amp; engineering<br />
+              services
             </motion.h1>
 
             {/* Subtitle */}
@@ -117,9 +117,9 @@ export default function SolarAnalyticsHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-slate-800 text-base sm:text-lg font-normal leading-relaxed max-w-md"
+              className="text-slate-800 text-base sm:text-lg font-normal leading-relaxed max-w-lg"
             >
-              Track sunlight, optimize your energy output, and make smarter solar decisions — all in one sleek, user-friendly dashboard.
+              Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -157,16 +157,16 @@ export default function SolarAnalyticsHero() {
 
           </div>
 
-          {/* ─── Right Column: Tablet Mockup Aligned on the Far Right Side ─── */}
-          <div className="w-full lg:flex-1 flex justify-end">
+          {/* ─── Right Column: Tablet Mockup Aligned on the Far Right Side (Overhanging / Flush Right) ─── */}
+          <div className="w-full lg:flex-1 flex justify-end overflow-visible">
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[680px] xl:max-w-[760px]"
+              className="relative w-full max-w-[760px] xl:max-w-[840px] 2xl:max-w-[920px] translate-x-4 sm:translate-x-8 lg:translate-x-12"
             >
               {/* Sleek Tablet Frame */}
-              <div className="relative rounded-[36px] p-3 sm:p-4 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.35)] border border-slate-700/60 ring-1 ring-white/10">
+              <div className="relative rounded-[36px] rounded-r-none p-3 sm:p-4 pr-0 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.45)] border border-slate-700/60 border-r-0 ring-1 ring-white/10">
                 
                 {/* Tablet Camera / Sensor Pill */}
                 <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-2 bg-slate-900 rounded-full flex items-center justify-center gap-2">
@@ -175,7 +175,7 @@ export default function SolarAnalyticsHero() {
                 </div>
 
                 {/* Tablet Screen Container */}
-                <div className="relative rounded-[26px] bg-[#0A0E1A] overflow-hidden border border-white/[0.06] text-slate-200">
+                <div className="relative rounded-[26px] rounded-r-none bg-[#0A0E1A] overflow-hidden border border-white/[0.06] border-r-0 text-slate-200">
                   
                   {/* Dashboard Top Bar */}
                   <div className="flex items-center justify-between px-4 py-2.5 bg-[#0D1322] border-b border-white/[0.06] text-[11px] text-slate-400">
