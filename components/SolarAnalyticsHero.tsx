@@ -426,50 +426,50 @@ export default function SolarAnalyticsHero() {
 
         </div>
 
-        {/* ─── Bottom Accreditation Logos Row — Official Logos Uploaded by User ─── */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-10 sm:gap-16 opacity-90 hover:opacity-100 transition-opacity">
+        {/* ─── Bottom Accreditation Logos Row — 100% Exactly Matches Screenshot 1 ─── */}
+        <div className="mt-16 sm:mt-20 flex flex-wrap items-center justify-center gap-8 sm:gap-14 lg:gap-20 opacity-80 hover:opacity-100 transition-opacity">
           {/* 1. NABCEP */}
           <div className="h-12 sm:h-16 flex items-center justify-center">
             <img
               src="/images/accreditations/nabcep-official.png"
               alt="NABCEP Certified PV Installation Professional"
-              className="h-full w-auto object-contain mix-blend-multiply"
+              className="h-full w-auto object-contain"
             />
           </div>
 
           {/* 2. LG Chem */}
-          <div className="h-12 sm:h-16 flex items-center justify-center">
+          <div className="h-14 sm:h-18 flex items-center justify-center">
             <img
               src="/images/accreditations/lg-chem-official.png"
               alt="LG Chem Certified Installer RESU Gen2"
-              className="h-full w-auto object-contain mix-blend-multiply"
+              className="h-full w-auto object-contain"
             />
           </div>
 
-          {/* 3. EverVolt */}
-          <div className="h-10 sm:h-14 flex items-center justify-center">
+          {/* 3. ENPHASE */}
+          <div className="h-12 sm:h-16 flex items-center justify-center">
+            <img
+              src="/images/accreditations/enphase-official.png"
+              alt="ENPHASE"
+              className="h-full w-auto object-contain"
+            />
+          </div>
+
+          {/* 4. EverVolt */}
+          <div className="h-9 sm:h-12 flex items-center justify-center">
             <img
               src="/images/accreditations/evervolt-official.png"
               alt="EverVolt Certified Installer"
-              className="h-full w-auto object-contain mix-blend-multiply"
+              className="h-full w-auto object-contain"
             />
           </div>
 
-          {/* 4. Drone Pilot */}
+          {/* 5. Drone Pilot */}
           <div className="h-12 sm:h-16 flex items-center justify-center">
             <img
               src="/images/accreditations/drone-pilot-official.png"
               alt="InterNACHI Certified Drone Pilot Training"
-              className="h-full w-auto object-contain mix-blend-multiply"
-            />
-          </div>
-
-          {/* 5. ENPHASE */}
-          <div className="h-10 sm:h-14 flex items-center justify-center">
-            <img
-              src="/images/accreditations/enphase-official.png"
-              alt="ENPHASE"
-              className="h-full w-auto object-contain mix-blend-multiply"
+              className="h-full w-auto object-contain"
             />
           </div>
         </div>

@@ -62,93 +62,74 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative w-full overflow-hidden bg-[#070A12] text-white">
+    <section id="contact" className="relative w-full overflow-hidden bg-black text-white pt-16 sm:pt-24 pb-0">
       
-      {/* ─── Main Dark Section (Matches Screenshot 1 Layout) ─── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      {/* ─── Main Section — Exactly Matches Screenshot 3 Alignment & Placing ─── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           
-          {/* ─── Left Column: Headline, Pill Button & Exact Screenshot 2 Content ─── */}
-          <div className="lg:col-span-6 flex flex-col justify-center space-y-8">
+          {/* ─── Left Column: Ready to get started?, Contact us Pill Button, and Bottom Info Text ─── */}
+          <div className="lg:col-span-5 flex flex-col justify-between min-h-[380px] sm:min-h-[460px] pb-12 sm:pb-16">
             
-            {/* Headline (from Screenshot 2) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-3"
-            >
-              <span className="inline-block text-xs font-bold text-orange-400 uppercase tracking-widest bg-orange-500/10 px-3.5 py-1 rounded-full border border-orange-500/20">
-                ENGINEERING CONSULTATION
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12]">
-                Uncertain about some
-technical aspects within
-your project?{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">
-                  Need a
-consultation from our
-Engineer?
-                </span>
-              </h2>
-            </motion.div>
-
-            {/* Pill Button (Matches Screenshot 1 Exactly: White capsule + black arrow circle) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex items-center gap-4 pt-1"
-            >
-              <button
-                type="button"
-                onClick={() => setModalOpen(true)}
-                className="group inline-flex items-center justify-between gap-6 bg-white hover:bg-slate-100 text-slate-950 font-bold px-7 py-3.5 rounded-full shadow-2xl shadow-white/10 transition-all hover:scale-105 active:scale-95"
+            <div className="space-y-8">
+              {/* Heading from Screenshot 3 */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-5xl sm:text-6xl lg:text-[68px] font-bold tracking-tight text-white leading-[1.08]"
               >
-                <span className="text-base font-extrabold">Contact us</span>
-                <div className="w-8 h-8 rounded-full bg-slate-950 text-white flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </button>
+                Ready to get<br />started?
+              </motion.h2>
 
-              <a
-                href="tel:+1-551-291-2786"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-orange-400 transition-colors px-4 py-3 rounded-full border border-slate-800 hover:border-orange-500/50"
+              {/* Pill Button from Screenshot 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <PhoneCall className="w-4 h-4 text-orange-400" />
-                <span>Call (551) 291-2786</span>
-              </a>
-            </motion.div>
+                <button
+                  type="button"
+                  onClick={() => setModalOpen(true)}
+                  className="inline-flex items-center gap-6 bg-white hover:bg-slate-100 text-slate-950 font-bold pl-7 pr-3 py-3 rounded-full shadow-xl shadow-white/5 transition-all group"
+                >
+                  <span className="text-base font-extrabold text-black">Contact us</span>
+                  <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </button>
+              </motion.div>
+            </div>
 
-            {/* Paragraph Text (Exact from Screenshot 2) */}
+            {/* Bottom Paragraph from Screenshot 3 */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl font-normal"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-sm font-normal pt-12 lg:pt-20"
             >
-              When it comes to projects involving large system sizes, new technologies, or intricate knowledge of local regulations, navigating the complexities can be challenging. Reach out to us through a quick call or schedule a meeting, and let’s delve into the specifics of your project.
+              Keep an eye on your energy use, eco-impact, and savings with the help of smart solar insights!
             </motion.p>
 
           </div>
 
-          {/* ─── Right Column: Floating Light Dashboard Mockup (Matches Screenshot 1) ─── */}
-          <div className="lg:col-span-6 relative">
+          {/* ─── Right Column: Dashboard Mockup Window Bezel from Screenshot 3 ─── */}
+          <div className="lg:col-span-7 relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
               className="relative w-full"
             >
-              {/* Dashboard Image (Matches Screenshot Exactly) */}
-              <div className="relative rounded-[28px] overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.5)] border border-slate-700/60 bg-white">
+              {/* Dashboard Tablet Window Frame Bezel */}
+              <div className="relative rounded-tl-[36px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.8)] border-l-4 border-t-4 border-slate-700/80 bg-white">
                 <img
                   src="/images/hero-dashboard-white.jpg"
-                  alt="Solar Analysis Dashboard"
+                  alt="Solar Analysis Dashboard Preview"
                   className="w-full h-auto object-cover"
                 />
               </div>
