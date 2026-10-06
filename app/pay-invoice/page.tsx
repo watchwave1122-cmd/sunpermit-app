@@ -31,14 +31,38 @@ export default function PayInvoicePage() {
   const merchantFee = (parsedAmount * 0.03);
   const totalAmount = (parsedAmount + merchantFee).toFixed(2);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-    }, 1200);
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Invoice Payment",
+          senderEmail: email,
+          subject: `[SunPermit] Invoice Payment Notice: ${companyName} ($${totalAmount})`,
+          data: {
+            companyName,
+            email,
+            streetAddress,
+            city,
+            state,
+            zip,
+            invoiceAmount: `$${parsedAmount.toFixed(2)}`,
+            merchantFee: `$${merchantFee.toFixed(2)}`,
+            totalPaid: `$${totalAmount}`,
+            paymentReference: paymentReference || "None",
+            cardLast4: cardNumber ? `**** ${cardNumber.slice(-4)}` : "Not provided",
+          },
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+    }
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
   };
 
   return (

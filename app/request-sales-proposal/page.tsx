@@ -50,14 +50,42 @@ export default function RequestSalesProposalPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-    }, 1200);
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Pre-Sale Proposal (Aurora)",
+          senderEmail: pmEmail,
+          subject: `[SunPermit] Pre-Sale Proposal Request: ${companyName} (${projectName})`,
+          data: {
+            companyName,
+            pmEmail,
+            projectName,
+            projectAddress,
+            projectType,
+            isNewConstruction,
+            sizingStrategy,
+            fireOffset,
+            annualKwh: annualKwh || "Not specified",
+            purchasePreference,
+            pricePerWatt: pricePerWatt || "Not specified",
+            moduleManufacturer: moduleManufacturer || "Not specified",
+            moduleWattage: moduleWattage || "Not specified",
+            inverterType: inverterType || "Not specified",
+            projectNotes: projectNotes || "None",
+          },
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+    }
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
   };
 
   return (

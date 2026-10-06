@@ -116,6 +116,30 @@ export default function InteractiveRoiCalculator() {
     }
 
     setValidationError("");
+    try {
+      fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Quote Wizard",
+          senderEmail: email,
+          subject: `[SunPermit Quote Request] ${name} (${propertyType}) | ${email}`,
+          data: {
+            name,
+            email,
+            phone,
+            propertyType,
+            includeDroneSurvey,
+            systemType,
+            systemSizeKw: propertyType === "Residential" ? `${systemSizeKw} KW` : "Commercial Project",
+            workVolume,
+            estimatedTotal: propertyType === "Residential" ? `$${calculatedTotal.toFixed(2)}` : "Custom quote required",
+          },
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+    }
     setIsSubmitted(true);
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
   };

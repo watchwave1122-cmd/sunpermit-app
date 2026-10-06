@@ -121,14 +121,38 @@ export default function PermitPlansetPage() {
   const [electricPicFiles, setElectricPicFiles] = useState<File[]>([]);
   const [propertySketchFiles, setPropertySketchFiles] = useState<File[]>([]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-    }, 1200);
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "Permit Planset",
+          senderEmail: email,
+          subject: `[SunPermit] New Permit Planset Request: ${companyName} (${projectName})`,
+          data: {
+            companyName,
+            email,
+            projectName,
+            projectAddress,
+            propertyCategory,
+            serviceOption,
+            hasBattery: hasBattery ? "Yes" : "No",
+            storageDetails: hasBattery ? storageDetails : "None",
+            submissionPreference: submissionPref,
+            systemType,
+            generalNotes: generalNotes || "None",
+          },
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+    }
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
   };
 
   return (
