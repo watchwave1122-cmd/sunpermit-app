@@ -427,11 +427,11 @@ export default function SolarAnalyticsHero() {
 
         </div>
 
-        {/* ─── Bottom Accreditation Logos Row — Pure Black Transparent Vector SVGs ─── */}
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-10 sm:gap-16 opacity-85 hover:opacity-100 transition-opacity">
+        {/* ─── Bottom Accreditation Logos Row — Pure Black Transparent Vector SVGs (Enlarged) ─── */}
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-12 sm:gap-20 opacity-90 hover:opacity-100 transition-opacity">
           {/* 1. NABCEP Certified PV Installation Professional */}
           <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 140 70" className="h-10 sm:h-11 w-auto fill-current text-black">
+            <svg viewBox="0 0 140 70" className="h-14 sm:h-16 w-auto fill-current text-black">
               {/* Starburst badge top arc */}
               <path d="M25,38 C23,32 25,24 30,18 C36,11 46,7 55,5 C65,3 75,3 85,5 C94,7 104,11 110,18 C115,24 117,32 115,38 Z" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="3,2" />
               <text x="70" y="24" textAnchor="middle" fontSize="10" fontWeight="900" letterSpacing="0.8">NABCEP</text>
@@ -446,7 +446,7 @@ export default function SolarAnalyticsHero() {
 
           {/* 2. LG Chem Certified Installer RESU Gen2 */}
           <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 90" className="h-12 sm:h-14 w-auto text-black">
+            <svg viewBox="0 0 90 90" className="h-16 sm:h-20 w-auto text-black">
               {/* Outer circular badge border */}
               <circle cx="45" cy="45" r="41" fill="none" stroke="currentColor" strokeWidth="2" />
               <circle cx="45" cy="45" r="37" fill="none" stroke="currentColor" strokeWidth="0.8" />
@@ -465,7 +465,7 @@ export default function SolarAnalyticsHero() {
 
           {/* 3. ENPHASE Logo */}
           <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 50" className="h-8 sm:h-10 w-auto text-black fill-none stroke-currentColor">
+            <svg viewBox="0 0 90 50" className="h-12 sm:h-14 w-auto text-black fill-none stroke-currentColor">
               {/* Enphase circular stylized 'e' icon */}
               <circle cx="45" cy="18" r="14" strokeWidth="3" />
               <line x1="31" y1="18" x2="59" y2="18" strokeWidth="3" />
@@ -476,7 +476,7 @@ export default function SolarAnalyticsHero() {
 
           {/* 4. EverVolt Certified Installer Panasonic */}
           <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 140 50" className="h-9 sm:h-11 w-auto text-black">
+            <svg viewBox="0 0 140 50" className="h-12 sm:h-15 w-auto text-black">
               {/* Box frame */}
               <rect x="2" y="2" width="136" height="46" fill="none" stroke="currentColor" strokeWidth="2.5" />
               {/* EverVolt main text with lightning bolt representation */}
@@ -495,7 +495,7 @@ export default function SolarAnalyticsHero() {
 
           {/* 5. Drone Pilot Training */}
           <div className="flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 90 90" className="h-12 sm:h-14 w-auto text-black fill-none stroke-currentColor">
+            <svg viewBox="0 0 90 90" className="h-16 sm:h-20 w-auto text-black fill-none stroke-currentColor">
               {/* Outer circular frame */}
               <circle cx="45" cy="38" r="26" strokeWidth="2.5" />
               {/* Drone center body */}

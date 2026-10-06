@@ -238,31 +238,7 @@ Sun Permit takes ownership of permit plansets, structural
         </div>
 
         {/* ─── Bottom Navigation Bar ─── */}
-        <div className="mt-12 flex items-center justify-end gap-6 pt-6 border-t border-slate-900/10">
-          
-          {/* Removed text block from screenshot 3 as requested */}
-
-          {/* Right: Round Arrow Buttons */}
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={handlePrev}
-              className="w-10 h-10 rounded-full border border-slate-400 hover:border-slate-900 text-slate-800 hover:text-slate-950 flex items-center justify-center transition-colors"
-              title="Previous"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button
-              type="button"
-              onClick={handleNext}
-              className="w-10 h-10 rounded-full border border-slate-400 hover:border-slate-900 text-slate-800 hover:text-slate-950 flex items-center justify-center transition-colors"
-              title="Next"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-
-        </div>
+        <div className="mt-12 pt-6 border-t border-slate-900/10" />
 
       </div>
     </section>

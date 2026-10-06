@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import SolarAnalyticsHero from "@/components/SolarAnalyticsHero";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import WhyChooseSunpermitSection from "@/components/WhyChooseSunpermitSection";
 import InteractiveRoiCalculator from "@/components/InteractiveRoiCalculator";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function HomePage() {
         </div>
         <AboutSection />
         <ServicesSection />
+        <WhyChooseSunpermitSection />
         <div id="pricing">
           <InteractiveRoiCalculator />
         </div>
