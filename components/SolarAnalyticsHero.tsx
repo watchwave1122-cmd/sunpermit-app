@@ -441,21 +441,24 @@ export default function SolarAnalyticsHero() {
 
                     </div>
 
-                    {/* Right 3D Visualizer Area: Glowing Faceted Solar Crystal (Matches Screenshot) */}
-                    <div className="hidden sm:flex flex-1 relative bg-[#070A12] overflow-hidden items-center justify-center p-4">
-                      {/* Architectural blueprint lines overlay in dark background */}
-                      <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="none">
-                        <polygon points="50,50 350,80 320,340 80,310" fill="none" stroke="#ffffff" strokeWidth="1" />
-                        <polygon points="120,20 280,40 370,220 210,380 40,260" fill="none" stroke="#ffffff" strokeWidth="1" />
-                        <line x1="50" y1="50" x2="320" y2="340" stroke="#ffffff" strokeWidth="1" />
-                        <line x1="350" y1="80" x2="80" y2="310" stroke="#ffffff" strokeWidth="1" />
+                    {/* Right 3D Visualizer Area: Glowing Faceted Solar House on the Exact Right */}
+                    <div className="hidden sm:flex flex-1 relative bg-[#070A12] bg-[radial-gradient(#ffffff12_1px,transparent_1px)] [background-size:16px_16px] overflow-hidden items-center justify-end pr-0">
+                      {/* Subtle warm sunset ambient radial glow behind house matching screenshot */}
+                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] h-[340px] rounded-full blur-[90px] bg-gradient-to-br from-orange-500/25 via-amber-500/15 to-transparent pointer-events-none" />
+
+                      {/* Geometric blueprint facet lines overlay */}
+                      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <polygon points="60,40 370,60 340,360 40,320" fill="none" stroke="#F97316" strokeWidth="1" strokeDasharray="3 3" />
+                        <line x1="60" y1="40" x2="340" y2="360" stroke="#F97316" strokeWidth="1" strokeDasharray="3 3" />
+                        <line x1="370" y1="60" x2="40" y2="320" stroke="#F97316" strokeWidth="1" strokeDasharray="3 3" />
                       </svg>
 
-                      <div className="relative z-10 w-full h-full min-h-[340px] flex items-center justify-center">
+                      {/* The House aligned to the Exact Right */}
+                      <div className="relative z-10 w-full h-full min-h-[350px] flex items-center justify-end pr-0">
                         <img
-                          src="/images/hero-3d-cube.jpg"
-                          alt="Solar Analytics 3D Model"
-                          className="w-full max-w-[340px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(235,94,36,0.5)]"
+                          src="/images/hero-solar-house-exact.png"
+                          alt="Solar Analytics 3D House Model"
+                          className="w-auto h-[290px] sm:h-[320px] lg:h-[350px] xl:h-[370px] max-w-none object-contain drop-shadow-[0_25px_50px_rgba(235,94,36,0.55)] translate-x-1 sm:translate-x-2"
                         />
                       </div>
                     </div>
