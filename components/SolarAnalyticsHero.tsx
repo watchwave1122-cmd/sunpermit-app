@@ -7,16 +7,19 @@ import SunPermitLogo from "@/components/SunPermitLogo";
 import {
   Search,
   MapPin,
-  Compass,
   Home,
   Sun,
   Layers,
-  Sliders,
   CheckCircle2,
   HelpCircle,
   LogOut,
-  Clock,
-  ShieldCheck,
+  Hexagon,
+  Grid3X3,
+  Building2,
+  FileText,
+  Settings,
+  Crosshair,
+  Globe,
 } from "lucide-react";
 
 export default function SolarAnalyticsHero() {
@@ -122,20 +125,6 @@ export default function SolarAnalyticsHero() {
               Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
-            {/* CTA Button */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="pt-1"
-            >
-              <Link
-                href="/quick"
-                className="inline-flex items-center justify-center bg-[#070A12] hover:bg-black text-white text-xs sm:text-[13px] font-bold px-6 py-2.5 rounded-xl shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
-              >
-                Get started
-              </Link>
-            </motion.div>
 
             {/* SunPermit Quick Feature Points with Green Checkmark Icons matching Screenshot */}
             <motion.div 
@@ -187,18 +176,18 @@ export default function SolarAnalyticsHero() {
                       <span className="text-slate-600">&gt;</span>
                       <span className="text-slate-500">...</span>
                       <span className="text-slate-600">&gt;</span>
-                      <span className="text-orange-400 font-semibold">Solar analysis</span>
+                      <span className="text-white font-semibold">Solar analysis</span>
                     </div>
                     
                     <div className="flex items-center gap-2">
                       <div className="relative">
-                        <Search className="w-3 h-3 absolute left-2 top-1/2 -translate-y-1/2 text-slate-500" />
+                        <Search className="w-3 h-3 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500" />
                         <input
                           type="text"
                           readOnly
                           placeholder="Search"
                           value=""
-                          className="bg-[#080B14] border border-white/[0.08] rounded-md pl-6 pr-2 py-0.5 text-[10px] text-slate-300 placeholder-slate-600 w-28 focus:outline-none cursor-default"
+                          className="bg-[#080B14] border border-white/[0.08] rounded-md pl-7 pr-2.5 py-1 text-[10px] text-slate-300 placeholder-slate-500 w-28 focus:outline-none cursor-default"
                         />
                       </div>
                     </div>
@@ -208,34 +197,41 @@ export default function SolarAnalyticsHero() {
                   <div className="flex">
                     
                     {/* Left Icon Rail */}
-                    <div className="w-11 sm:w-12 bg-[#090D18] border-r border-white/[0.06] py-3.5 flex flex-col items-center justify-between min-h-[460px] select-none">
+                    <div className="w-11 sm:w-12 bg-[#090D18] border-r border-white/[0.06] py-3.5 flex flex-col items-center justify-between min-h-[480px] select-none">
                       {/* Top App Icon */}
                       <div className="flex flex-col items-center gap-4">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-500 to-amber-400 p-[1.5px] flex items-center justify-center">
-                          <div className="w-full h-full bg-[#0A0E1A] rounded-full flex items-center justify-center">
-                            <div className="w-3 h-3 rounded-full bg-gradient-to-tr from-orange-500 to-amber-400 -translate-x-0.5" />
-                          </div>
+                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-xs">
+                          <div className="w-3 h-3 rounded-full border-2 border-white/90" />
                         </div>
 
-                        {/* Rail Nav Icons */}
-                        <div className="flex flex-col items-center gap-3 pt-2">
+                        {/* Rail Nav Icons (6 icons matching screenshot) */}
+                        <div className="flex flex-col items-center gap-3 pt-1">
                           <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
                             <Home className="w-4 h-4" />
                           </div>
                           <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
-                            <Sun className="w-4 h-4" />
-                          </div>
-                          <div className="p-1.5 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30">
-                            <Sliders className="w-4 h-4" />
+                            <Hexagon className="w-4 h-4" />
                           </div>
                           <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
-                            <Layers className="w-4 h-4" />
+                            <Grid3X3 className="w-4 h-4" />
+                          </div>
+                          <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
+                            <Sun className="w-4 h-4" />
+                          </div>
+                          <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
+                            <Building2 className="w-4 h-4" />
+                          </div>
+                          <div className="p-1.5 rounded-lg text-slate-400 hover:text-white cursor-pointer transition-colors">
+                            <FileText className="w-4 h-4" />
                           </div>
                         </div>
                       </div>
 
-                      {/* Bottom Utility Icons */}
+                      {/* Bottom Utility Icons (3 icons matching screenshot) */}
                       <div className="flex flex-col items-center gap-3">
+                        <div className="p-1.5 rounded-lg text-slate-500 hover:text-slate-300 cursor-pointer">
+                          <Settings className="w-4 h-4" />
+                        </div>
                         <div className="p-1.5 rounded-lg text-slate-500 hover:text-slate-300 cursor-pointer">
                           <HelpCircle className="w-4 h-4" />
                         </div>
@@ -246,33 +242,37 @@ export default function SolarAnalyticsHero() {
                     </div>
 
                     {/* Middle Analytics Column */}
-                    <div className="flex-1 p-3.5 sm:p-4.5 space-y-3.5 max-w-[340px] sm:max-w-[370px]">
+                    <div className="w-[260px] sm:w-[280px] xl:w-[295px] shrink-0 p-3 sm:p-3.5 space-y-3">
                       
                       {/* Overview Box */}
-                      <div className="bg-[#101626] border border-white/[0.06] rounded-xl p-3 shadow-inner">
-                        <h4 className="text-[11px] font-bold text-white mb-2.5 tracking-wide">Overview</h4>
+                      <div className="bg-[#101626]/90 border border-white/[0.06] rounded-xl p-3 shadow-inner">
+                        <h4 className="text-[11px] font-bold text-white mb-2 tracking-wide">Overview</h4>
                         <div className="space-y-2 text-[10px]">
-                          <div className="flex items-start gap-2">
+                          <div className="flex items-start gap-2.5">
                             <MapPin className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
                             <div>
-                              <p className="text-[9px] text-slate-500 uppercase tracking-wider">Address</p>
+                              <p className="text-[8.5px] text-slate-500 uppercase tracking-wider">Address</p>
                               <p className="text-slate-200 font-medium">123 Solar Street, Sunnytown</p>
                             </div>
                           </div>
-                          <div className="flex items-start gap-2">
-                            <Compass className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
+                          <div className="flex items-start gap-2.5">
+                            <Crosshair className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
                             <div>
-                              <p className="text-[9px] text-slate-500 uppercase tracking-wider">GPS Coordinates</p>
+                              <p className="text-[8.5px] text-slate-500 uppercase tracking-wider">GPS Coordinates</p>
                               <p className="text-slate-200 font-medium">40.7128° N, 74.0060° W</p>
                             </div>
                           </div>
-                          <div className="grid grid-cols-2 gap-2 pt-1 border-t border-white/[0.04]">
+                          <div className="flex items-start gap-2.5">
+                            <Globe className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
                             <div>
-                              <p className="text-[9px] text-slate-500 uppercase tracking-wider">Time Zone</p>
+                              <p className="text-[8.5px] text-slate-500 uppercase tracking-wider">Time Zone</p>
                               <p className="text-slate-200 font-medium">EDT (UTC -4)</p>
                             </div>
+                          </div>
+                          <div className="flex items-start gap-2.5">
+                            <Layers className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
                             <div>
-                              <p className="text-[9px] text-slate-500 uppercase tracking-wider">Roof Surface Area</p>
+                              <p className="text-[8.5px] text-slate-500 uppercase tracking-wider">Roof Surface Area</p>
                               <p className="text-slate-200 font-medium">250 m²</p>
                             </div>
                           </div>
@@ -280,7 +280,7 @@ export default function SolarAnalyticsHero() {
                       </div>
 
                       {/* Solar Energy Potential Box */}
-                      <div className="bg-[#101626] border border-white/[0.06] rounded-xl p-3 shadow-inner">
+                      <div className="bg-[#101626]/90 border border-white/[0.06] rounded-xl p-3 shadow-inner">
                         <div className="flex items-center justify-between mb-2">
                           <h4 className="text-[11px] font-bold text-white tracking-wide">Solar Energy Potential</h4>
                           <div className="flex items-center gap-0.5 bg-[#090D18] p-0.5 rounded-md border border-white/[0.06] text-[8px]">
@@ -290,7 +290,7 @@ export default function SolarAnalyticsHero() {
                                 onClick={() => setActiveRange(r)}
                                 className={`px-1.5 py-0.5 rounded capitalize font-medium transition-all ${
                                   activeRange === r 
-                                    ? "bg-slate-700 text-white font-bold" 
+                                    ? "bg-white text-slate-950 font-bold shadow-xs" 
                                     : "text-slate-400 hover:text-slate-200"
                                 }`}
                               >
@@ -311,15 +311,15 @@ export default function SolarAnalyticsHero() {
                                   i === 16 
                                     ? "bg-gradient-to-t from-orange-500 to-amber-300 shadow-sm shadow-orange-500/50" 
                                     : i >= 14 && i <= 18 
-                                    ? "bg-slate-400" 
+                                    ? "bg-slate-300" 
                                     : "bg-slate-700/60"
                                 }`}
                               />
                             ))}
                           </div>
                           <div className="flex justify-between text-[8px] text-slate-400 px-1 mt-1 border-t border-white/[0.04] pt-0.5">
-                            <span>April - 158 kWh</span>
-                            <span className="text-orange-400 font-semibold">May - 186 kWh</span>
+                            <span>April - 150 kWh</span>
+                            <span className="text-orange-400 font-bold">May - 166 kWh</span>
                           </div>
                         </div>
 
@@ -345,53 +345,85 @@ export default function SolarAnalyticsHero() {
                       </div>
 
                       {/* Solar Generation Efficiency Box */}
-                      <div className="bg-[#101626] border border-white/[0.06] rounded-xl p-3 shadow-inner">
+                      <div className="bg-[#101626]/90 border border-white/[0.06] rounded-xl p-3 shadow-inner">
                         <div className="flex items-center justify-between mb-1">
                           <h4 className="text-[11px] font-bold text-white tracking-wide">Solar Generation Efficiency</h4>
-                          <span className="text-[8px] px-1.5 py-0.5 bg-emerald-500/10 text-emerald-400 font-bold rounded border border-emerald-500/20">
-                            Live
-                          </span>
                         </div>
 
-                        {/* Multi-line Mini Chart with 84% callout badge */}
-                        <div className="relative h-14 w-full my-1">
-                          <svg className="w-full h-full overflow-visible" viewBox="0 0 200 60" preserveAspectRatio="none">
-                            <defs>
-                              <linearGradient id="gradOrange" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stopColor="#F97316" />
-                                <stop offset="100%" stopColor="#FBBF24" />
-                              </linearGradient>
-                              <linearGradient id="gradPurple" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stopColor="#818CF8" />
-                                <stop offset="100%" stopColor="#C084FC" />
-                              </linearGradient>
-                            </defs>
-                            
-                            <line x1="0" y1="15" x2="200" y2="15" stroke="#ffffff" strokeOpacity="0.04" />
-                            <line x1="0" y1="35" x2="200" y2="35" stroke="#ffffff" strokeOpacity="0.04" />
-                            
-                            <path
-                              d="M0,45 Q30,42 60,36 T120,24 T160,30 T200,20"
-                              fill="none"
-                              stroke="url(#gradPurple)"
-                              strokeWidth="2"
-                            />
-                            
-                            <path
-                              d="M0,38 Q40,30 80,18 T140,12 T180,22 T200,10"
-                              fill="none"
-                              stroke="url(#gradOrange)"
-                              strokeWidth="2.5"
-                            />
-                          </svg>
+                        {/* Multi-line Mini Chart with axes and 84% callout badge */}
+                        <div className="relative h-16 w-full flex items-center my-1">
+                          {/* Y-axis labels */}
+                          <div className="flex flex-col justify-between h-12 text-[7px] text-slate-500 pr-1 select-none">
+                            <span>10</span>
+                            <span>8</span>
+                            <span>6</span>
+                            <span>4</span>
+                            <span>2</span>
+                            <span>0</span>
+                          </div>
 
-                          <div className="absolute top-1 left-1/2 -translate-x-1/2 bg-slate-950/90 border border-orange-500/40 px-2 py-0.5 rounded-full text-[9px] font-extrabold text-orange-400 shadow-md">
-                            84%
+                          {/* Chart SVG */}
+                          <div className="relative flex-1 h-12">
+                            <svg className="w-full h-full overflow-visible" viewBox="0 0 200 60" preserveAspectRatio="none">
+                              <defs>
+                                <pattern id="diagHatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                                  <line x1="0" y1="0" x2="0" y2="6" stroke="#F97316" strokeWidth="1" strokeOpacity="0.35" />
+                                </pattern>
+                              </defs>
+                              
+                              <line x1="0" y1="12" x2="200" y2="12" stroke="#ffffff" strokeOpacity="0.04" strokeDasharray="2 2" />
+                              <line x1="0" y1="24" x2="200" y2="24" stroke="#ffffff" strokeOpacity="0.04" strokeDasharray="2 2" />
+                              <line x1="0" y1="36" x2="200" y2="36" stroke="#ffffff" strokeOpacity="0.04" strokeDasharray="2 2" />
+                              <line x1="0" y1="48" x2="200" y2="48" stroke="#ffffff" strokeOpacity="0.04" strokeDasharray="2 2" />
+                              
+                              {/* Shaded hatched area under orange line */}
+                              <path
+                                d="M0,40 Q35,32 70,22 T120,14 T160,20 T200,8 L200,60 L0,60 Z"
+                                fill="url(#diagHatch)"
+                              />
+
+                              {/* Purple/blue secondary line */}
+                              <path
+                                d="M0,52 Q40,46 80,42 T130,34 T170,30 T200,24"
+                                fill="none"
+                                stroke="#6366F1"
+                                strokeWidth="1.5"
+                              />
+                              {[ [0,52], [40,46], [80,42], [130,34], [170,30], [200,24] ].map(([cx, cy], i) => (
+                                <circle key={i} cx={cx} cy={cy} r="1.8" fill="#818CF8" />
+                              ))}
+
+                              {/* Top orange line */}
+                              <path
+                                d="M0,40 Q35,32 70,22 T120,14 T160,20 T200,8"
+                                fill="none"
+                                stroke="#F97316"
+                                strokeWidth="2"
+                              />
+                              {[ [0,40], [35,32], [70,22], [120,14], [160,20], [200,8] ].map(([cx, cy], i) => (
+                                <circle key={i} cx={cx} cy={cy} r="1.8" fill="#FDBA74" />
+                              ))}
+                            </svg>
+
+                            {/* 84% Callout Badge */}
+                            <div className="absolute top-0 left-[60%] -translate-x-1/2 bg-[#090D18] border border-orange-500/50 px-1.5 py-0.5 rounded-full text-[8px] font-extrabold text-white shadow-md">
+                              84%
+                            </div>
                           </div>
                         </div>
 
+                        {/* X-axis Month Labels */}
+                        <div className="flex justify-between pl-4 pr-1 text-[7.5px] text-slate-500 border-b border-white/[0.04] pb-1 mb-1.5 select-none">
+                          <span>Jan</span>
+                          <span>Feb</span>
+                          <span>Mar</span>
+                          <span>Apr</span>
+                          <span>May</span>
+                          <span>Jun</span>
+                        </div>
+
                         {/* Legend */}
-                        <div className="space-y-0.5 text-[7.5px] text-slate-400 pt-1 border-t border-white/[0.04]">
+                        <div className="space-y-0.5 text-[7.5px] text-slate-400 pt-0.5">
                           <div className="flex items-center gap-1.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                             <span>Expected Solar Generation (MWh)</span>
@@ -410,12 +442,20 @@ export default function SolarAnalyticsHero() {
                     </div>
 
                     {/* Right 3D Visualizer Area: Glowing Faceted Solar Crystal (Matches Screenshot) */}
-                    <div className="hidden sm:flex flex-1 relative bg-[#070A12] overflow-hidden items-center justify-center p-3">
-                      <div className="relative z-10 w-full h-full min-h-[300px] flex items-center justify-center">
+                    <div className="hidden sm:flex flex-1 relative bg-[#070A12] overflow-hidden items-center justify-center p-4">
+                      {/* Architectural blueprint lines overlay in dark background */}
+                      <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="none">
+                        <polygon points="50,50 350,80 320,340 80,310" fill="none" stroke="#ffffff" strokeWidth="1" />
+                        <polygon points="120,20 280,40 370,220 210,380 40,260" fill="none" stroke="#ffffff" strokeWidth="1" />
+                        <line x1="50" y1="50" x2="320" y2="340" stroke="#ffffff" strokeWidth="1" />
+                        <line x1="350" y1="80" x2="80" y2="310" stroke="#ffffff" strokeWidth="1" />
+                      </svg>
+
+                      <div className="relative z-10 w-full h-full min-h-[340px] flex items-center justify-center">
                         <img
                           src="/images/hero-3d-cube.jpg"
                           alt="Solar Analytics 3D Model"
-                          className="w-full max-w-[280px] h-auto object-contain rounded-2xl drop-shadow-[0_20px_40px_rgba(235,94,36,0.45)]"
+                          className="w-full max-w-[340px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(235,94,36,0.5)]"
                         />
                       </div>
                     </div>
