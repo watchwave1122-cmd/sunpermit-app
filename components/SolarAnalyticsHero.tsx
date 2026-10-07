@@ -94,23 +94,22 @@ export default function SolarAnalyticsHero() {
         </nav>
       </header>
 
-      {/* ─── Main Hero Content: Exactly Matches Screenshot 2 Alignment (Aligned Exact Right) ─── */}
-      <main className="relative z-10 w-full pl-4 sm:pl-8 lg:pl-12 xl:pl-16 pr-3 sm:pr-6 lg:pr-8 xl:pr-10 pt-10 sm:pt-14 pb-16 lg:pb-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
+      {/* ─── Main Hero Content: Exactly Matches Screenshot Alignment ─── */}
+      <main className="relative z-10 w-full pl-6 sm:pl-10 md:pl-16 lg:pl-20 xl:pl-28 pr-0 pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full">
           
           {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
-          <div className="w-full lg:max-w-[480px] xl:max-w-[530px] shrink-0 flex flex-col justify-center space-y-7 text-left">
+          <div className="w-full lg:w-[480px] xl:w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
             
-            {/* Main Headline */}
+            {/* Main Headline (2 lines matching screenshot) */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
+              className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[58px] font-black tracking-tight text-[#070A12] leading-[1.08]"
             >
-              Order solar design<br />
-              &amp; engineering<br />
-              services
+              Order solar design &amp;<br className="hidden sm:inline" />
+              engineering services
             </motion.h1>
 
             {/* Subtitle */}
@@ -118,39 +117,56 @@ export default function SolarAnalyticsHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-slate-800 text-sm sm:text-base font-normal leading-relaxed max-w-lg"
+              className="text-[#373330] text-xs sm:text-[13px] md:text-sm font-normal leading-[1.65] max-w-[460px]"
             >
               Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
+            {/* CTA Button */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="pt-1"
+            >
+              <Link
+                href="/quick"
+                className="inline-flex items-center justify-center bg-[#070A12] hover:bg-black text-white text-xs sm:text-[13px] font-bold px-6 py-2.5 rounded-xl shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Get started
+              </Link>
+            </motion.div>
 
-            {/* SunPermit Quick Feature Points with Amber/Orange Icons from Screenshot */}
+            {/* SunPermit Quick Feature Points with Green Checkmark Icons matching Screenshot */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-slate-800"
+              className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] sm:text-xs font-semibold text-[#1C1917]"
             >
               <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-orange-600" /> 24-Hr SLA Guarantee
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 stroke-[2.2]" />
+                <span>24-Hr SLA Guarantee</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-orange-600" /> 50-State PE Licensed
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 stroke-[2.2]" />
+                <span>50-State PE Licensed</span>
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-orange-600" /> 99.8% AHJ Pass Rate
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 stroke-[2.2]" />
+                <span>99.8% AHJ Pass Rate</span>
               </span>
             </motion.div>
 
           </div>
 
-          {/* ─── Right Column: Black Dashboard Tablet Mockup Aligned Exact Right (Matches Screenshot 2) ─── */}
-          <div className="w-full lg:flex-1 flex justify-end items-center">
+          {/* ─── Right Column: Black Dashboard Tablet Mockup Aligned Flush Right (Matches Screenshot) ─── */}
+          <div className="w-full lg:flex-1 flex justify-end items-center pr-0 sm:pr-4 lg:pr-0 overflow-visible">
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[700px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[860px] ml-auto mr-0"
+              className="relative w-full max-w-[720px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[860px] ml-auto mr-0 lg:-mr-4 xl:mr-0"
             >
               {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 2 */}
               <div className="relative rounded-[36px] p-2.5 sm:p-3.5 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.5)] border border-slate-700/80 ring-1 ring-white/10">
@@ -414,50 +430,50 @@ export default function SolarAnalyticsHero() {
 
         </div>
 
-        {/* ─── Bottom Accreditation Logos Row — 100% Exactly Matches Screenshot 1 ─── */}
-        <div className="mt-16 sm:mt-20 max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8 sm:gap-14 lg:gap-20 opacity-80 hover:opacity-100 transition-opacity">
+        {/* ─── Bottom Accreditation Logos Row — 100% Exactly Matches Screenshot ─── */}
+        <div className="mt-12 sm:mt-16 lg:mt-20 max-w-5xl mx-auto flex flex-wrap items-center justify-between sm:justify-center gap-6 sm:gap-14 lg:gap-20 px-4">
           {/* 1. NABCEP */}
-          <div className="h-12 sm:h-16 flex items-center justify-center">
+          <div className="h-8 sm:h-10 md:h-11 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
             <img
               src="/images/accreditations/nabcep-official.png"
               alt="NABCEP Certified PV Installation Professional"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain brightness-0 contrast-200"
             />
           </div>
 
           {/* 2. LG Chem */}
-          <div className="h-14 sm:h-18 flex items-center justify-center">
+          <div className="h-9 sm:h-11 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
             <img
               src="/images/accreditations/lg-chem-official.png"
               alt="LG Chem Certified Installer RESU Gen2"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain brightness-0 contrast-200"
             />
           </div>
 
           {/* 3. ENPHASE */}
-          <div className="h-12 sm:h-16 flex items-center justify-center">
+          <div className="h-8 sm:h-10 md:h-11 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
             <img
               src="/images/accreditations/enphase-official.png"
               alt="ENPHASE"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain brightness-0 contrast-200"
             />
           </div>
 
           {/* 4. EverVolt */}
-          <div className="h-9 sm:h-12 flex items-center justify-center">
+          <div className="h-7 sm:h-9 md:h-10 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
             <img
               src="/images/accreditations/evervolt-official.png"
               alt="EverVolt Certified Installer"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain brightness-0 contrast-200"
             />
           </div>
 
           {/* 5. Drone Pilot */}
-          <div className="h-12 sm:h-16 flex items-center justify-center">
+          <div className="h-8 sm:h-10 md:h-11 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
             <img
               src="/images/accreditations/drone-pilot-official.png"
               alt="InterNACHI Certified Drone Pilot Training"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain brightness-0 contrast-200"
             />
           </div>
         </div>
