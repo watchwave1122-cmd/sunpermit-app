@@ -503,7 +503,7 @@ export default function InteractiveRoiCalculator() {
                         type="submit"
                         className="px-8 py-2.5 rounded-xl text-xs font-bold bg-[#E6561B] hover:bg-[#D4470F] text-white transition-colors shadow-xs"
                       >
-                        Get Started
+                        Calculate Savings
                       </button>
                     )}
                   </div>

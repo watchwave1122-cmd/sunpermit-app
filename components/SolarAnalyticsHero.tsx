@@ -85,10 +85,10 @@ export default function SolarAnalyticsHero() {
           {/* Right Actions */}
           <div className="flex items-center gap-4">
             <Link
-              href="/quick"
-              className="bg-slate-950 hover:bg-slate-800 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+              href="/submit-company"
+              className="text-xs font-semibold text-slate-700 hover:text-slate-950 px-3 py-1.5 rounded-lg hover:bg-slate-100 transition-colors"
             >
-              Get started
+              Company Details
             </Link>
           </div>
         </nav>
@@ -123,20 +123,6 @@ export default function SolarAnalyticsHero() {
               Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
-            {/* CTA Button */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-6 pt-1"
-            >
-              <Link
-                href="/quick"
-                className="bg-slate-950 hover:bg-slate-800 text-white text-sm sm:text-base font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-slate-950/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
-              >
-                Get started
-              </Link>
-            </motion.div>
 
             {/* SunPermit Quick Feature Points with Amber/Orange Icons from Screenshot */}
             <motion.div 

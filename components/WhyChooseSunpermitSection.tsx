@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 export default function WhyChooseSunpermitSection() {
-  const [sliderValue, setSliderValue] = useState(55);
 
   const features = [
     {
@@ -99,69 +98,20 @@ export default function WhyChooseSunpermitSection() {
             </div>
           </div>
 
-          {/* Right Column: Faceted 3D Solar Model + Floating Solar Analysis Slider Card */}
+          {/* Right Column: Solar Analysis Feature Visual matching Screenshot */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative w-full max-w-[540px] aspect-[4/3] rounded-[36px] bg-[#F7F5F0] border border-slate-200/80 shadow-sm flex items-center justify-center p-8 overflow-hidden"
+              className="relative w-full max-w-[560px] rounded-[32px] sm:rounded-[36px] overflow-hidden border border-slate-200/90 shadow-2xl bg-white"
             >
-              {/* Dark container with 3D Solar Model Crystal */}
-              <div className="relative z-0 w-60 h-60 sm:w-68 sm:h-68 bg-[#070A12] rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl border border-white/[0.06] p-4">
-                <img
-                  src="/images/hero-3d-cube.jpg"
-                  alt="3D Solar Crystal"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(235,94,36,0.45)]"
-                />
-              </div>
-
-              {/* Floating Solar Analysis Slider Card */}
-              <div className="absolute bottom-6 left-6 z-10 w-[240px] sm:w-[260px] bg-white rounded-2xl p-4 shadow-xl border border-slate-200/90 text-slate-900 space-y-3">
-                <div className="text-xs font-bold text-slate-900">
-                  Solar Analysis
-                </div>
-
-                {/* Slider track with orange-pink gradient */}
-                <div className="relative">
-                  <div className="h-2 w-full rounded-full bg-gradient-to-r from-purple-500 via-rose-500 to-amber-500 relative">
-                    <div
-                      className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-slate-950 border-2 border-white shadow-sm cursor-pointer"
-                      style={{ left: `calc(${sliderValue}% - 7px)` }}
-                    />
-                  </div>
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={sliderValue}
-                    onChange={(e) => setSliderValue(Number(e.target.value))}
-                    className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
-                  />
-                </div>
-
-                {/* Stats */}
-                <div className="space-y-1.5 pt-1 text-[10px]">
-                  <div className="flex justify-between text-slate-600">
-                    <span>Yearly Average Energy</span>
-                    <span className="font-bold text-slate-950">1578 kWh/m²</span>
-                  </div>
-                  <div className="flex justify-between text-slate-600">
-                    <span>Sun Exposure</span>
-                    <span className="font-bold text-slate-950">79%</span>
-                  </div>
-                  <div className="flex justify-between text-slate-600">
-                    <span>Peak Sun Hours</span>
-                    <span className="font-bold text-slate-950">5.3 hours</span>
-                  </div>
-                  <div className="flex justify-between text-slate-600">
-                    <span>Daytime Sun Exposure</span>
-                    <span className="font-bold text-slate-950">9.54 h/day</span>
-                  </div>
-                </div>
-              </div>
-
+              <img
+                src="/images/why-choose-sunpermit.jpg"
+                alt="Solar Analysis Dashboard"
+                className="w-full h-auto object-cover block"
+              />
             </motion.div>
           </div>
 
