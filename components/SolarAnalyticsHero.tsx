@@ -104,14 +104,14 @@ export default function SolarAnalyticsHero() {
           {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
           <div className="w-full lg:w-[480px] xl:w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
             
-            {/* Main Headline (2 lines matching screenshot) */}
+            {/* Main Headline (Clean responsive wrap, never isolates '&') */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[58px] font-black tracking-tight text-[#070A12] leading-[1.08]"
             >
-              Order solar design &amp;<br className="hidden sm:inline" />
+              Order solar design&nbsp;&amp;<br className="hidden sm:inline" />
               engineering services
             </motion.h1>
 
@@ -125,12 +125,11 @@ export default function SolarAnalyticsHero() {
               Our goal is to provide reliable service by assisting solar industry in every aspect and take part in making the solar network stronger. Get assistance and grow seamlessly.
             </motion.p>
 
-
             {/* SunPermit Quick Feature Points with Green Checkmark Icons matching Screenshot */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] sm:text-xs font-semibold text-[#1C1917]"
             >
               <span className="flex items-center gap-1.5">

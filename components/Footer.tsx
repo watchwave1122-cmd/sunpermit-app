@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import SunPermitLogo from "@/components/SunPermitLogo";
-import { ArrowUp, Sparkles, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -13,53 +13,84 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-white text-slate-900 border-t border-slate-200 pt-16 pb-12">
+    <footer className="w-full bg-white text-slate-900 border-t border-slate-200/80 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* ─── Main Footer Columns (Matches Screenshot 1 Layout with Screenshot 2 Content) ─── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-slate-100">
-          
-          {/* ─── Column 1: Value Proposition & Bundle CTA (from Screenshot 2) ─── */}
-          <div className="lg:col-span-5 space-y-5">
-            <div className="mb-2">
-              <SunPermitLogo height={42} />
-            </div>
+        {/* ─── Top Header Row: Logo & Direct Contact Callouts (Matches Screenshot 2 Exactly) ─── */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-14 border-b border-slate-100">
+          <Link href="/" className="inline-block group">
+            <SunPermitLogo height={42} />
+          </Link>
+
+          <div className="flex flex-wrap items-center gap-8 sm:gap-14">
+            {/* Callout 1: Phone */}
             <div>
-              <span className="text-[11px] font-bold text-orange-600 uppercase tracking-widest bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200">
-                Volume Bundles
+              <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">
+                CALL US DIRECT
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 mt-2 tracking-tight">
-                Got a good work volume?<br />
-                Ask about our bundles.
-              </h3>
+              <a
+                href="tel:+1-551-291-2786"
+                className="text-lg sm:text-xl font-bold text-slate-950 hover:text-orange-600 transition-colors"
+              >
+                (551) 291-2786
+              </a>
             </div>
 
-            <p className="text-sm text-slate-600 leading-relaxed font-normal max-w-md">
+            {/* Callout 2: Email */}
+            <div>
+              <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">
+                EMAIL SUPPORT
+              </span>
+              <a
+                href="mailto:support@sunpermit.com"
+                className="text-lg sm:text-xl font-bold text-slate-950 hover:text-orange-600 transition-colors"
+              >
+                support@sunpermit.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ─── Main 4 Columns Section (Matches Screenshot 2 Exactly) ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-14 border-b border-slate-100">
+          
+          {/* Column 1: Volume Bundles CTA (Left 5 Cols) */}
+          <div className="lg:col-span-5 space-y-4 pr-0 sm:pr-4">
+            <span className="inline-block text-[10px] font-bold text-orange-600 uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-200/90">
+              VOLUME BUNDLES
+            </span>
+
+            <h3 className="text-2xl sm:text-[28px] font-extrabold text-slate-950 tracking-tight leading-tight">
+              Got a good work volume?<br />
+              Ask about our bundles.
+            </h3>
+
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-md">
               You can subscribe to our bundle packages to offer you one-stop solution for your projects. Our bundle includes design &amp; engineering stamps, interconnection, permitting, rebate, HOA etc.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
                 href="/request-permit"
-                className="bg-slate-950 hover:bg-slate-800 text-white text-sm font-bold px-6 py-3 rounded-full transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+                className="bg-slate-950 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-full transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
               >
                 Get a Quote
               </Link>
               
               <a
                 href="tel:+1-551-291-2786"
-                className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-orange-600 px-4 py-3 rounded-full border border-slate-200 hover:border-orange-300 transition-colors"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-800 hover:text-orange-600 px-5 py-3 rounded-full border border-slate-200 hover:border-orange-300 transition-colors bg-white shadow-xs"
               >
                 <Phone className="w-3.5 h-3.5 text-orange-500" />
-                (551) 291-2786
+                <span>Call Us Now</span>
               </a>
             </div>
           </div>
 
-          {/* ─── Column 2: Navigation (Matches Screenshot 1) ─── */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Column 2: Navigation */}
+          <div className="lg:col-span-2 space-y-3.5">
             <h4 className="text-sm font-bold text-slate-950">Navigation</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               <li>
                 <Link href="#about" className="hover:text-slate-950 transition-colors">
                   About Us
@@ -76,7 +107,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/request-permit" className="hover:text-slate-950 transition-colors">
+                <Link href="/permit-planset" className="hover:text-slate-950 transition-colors">
                   Permit Plansets
                 </Link>
               </li>
@@ -88,10 +119,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ─── Column 3: Follow us (Matches Screenshot 1 & 2) ─── */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Column 3: Follow us */}
+          <div className="lg:col-span-2 space-y-3.5">
             <h4 className="text-sm font-bold text-slate-950">Follow us</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               <li>
                 <a
                   href="https://instagram.com/sunpermit"
@@ -135,10 +166,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ─── Column 4: Legal (Matches Screenshot 1) ─── */}
-          <div className="lg:col-span-3 space-y-4">
+          {/* Column 4: Legal */}
+          <div className="lg:col-span-3 space-y-3.5">
             <h4 className="text-sm font-bold text-slate-950">Legal</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               <li>
                 <Link href="/submit-company" className="hover:text-slate-950 transition-colors">
                   Terms &amp; Conditions
@@ -169,8 +200,8 @@ export default function Footer() {
 
         </div>
 
-        {/* ─── Bottom Copyright & Back to Top (Matches Screenshot 1 Exactly) ─── */}
-        <div className="pt-8 flex items-center justify-between text-xs font-medium text-slate-500">
+        {/* ─── Bottom Row: Copyright & Back to Top (Matches Screenshot 2 Exactly) ─── */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-500">
           <p>
             Copyright @ SUNPERMIT, LLC {new Date().getFullYear()}
           </p>
@@ -178,10 +209,10 @@ export default function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-950 transition-colors font-semibold"
+            className="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-950 transition-colors font-semibold cursor-pointer"
           >
             <span>Back to top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <span className="text-sm">↑</span>
           </button>
         </div>
 
