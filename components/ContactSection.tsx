@@ -64,12 +64,12 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative w-full overflow-hidden bg-black text-white pt-16 sm:pt-24 pb-0">
       
-      {/* ─── Main Section — Exactly Matches Screenshot 3 Alignment & Placing ─── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+      {/* ─── Main Section: Flush to Edge Right (Matches Screenshot) ─── */}
+      <div className="w-full pl-6 sm:pl-10 md:pl-16 lg:pl-20 xl:pl-28 2xl:pl-36 pr-0 relative z-10">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-8 w-full">
           
           {/* ─── Left Column: Ready to get started?, Contact us Pill Button, and Bottom Info Text ─── */}
-          <div className="lg:col-span-5 flex flex-col justify-between min-h-[380px] sm:min-h-[460px] pb-12 sm:pb-16">
+          <div className="w-full lg:w-[460px] xl:w-[500px] 2xl:w-[540px] shrink-0 flex flex-col justify-between min-h-[380px] sm:min-h-[460px] pb-12 sm:pb-16 pr-6 sm:pr-0">
             
             <div className="space-y-8">
               {/* Heading from Screenshot 3 */}
@@ -93,7 +93,7 @@ export default function ContactSection() {
                 <button
                   type="button"
                   onClick={() => setModalOpen(true)}
-                  className="inline-flex items-center gap-6 bg-white hover:bg-slate-100 text-slate-950 font-bold pl-7 pr-3 py-3 rounded-full shadow-xl shadow-white/5 transition-all group"
+                  className="inline-flex items-center gap-6 bg-white hover:bg-slate-100 text-slate-950 font-bold pl-7 pr-3 py-3 rounded-full shadow-xl shadow-white/5 transition-all group cursor-pointer"
                 >
                   <span className="text-base font-extrabold text-black">Contact us</span>
                   <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
@@ -116,16 +116,16 @@ export default function ContactSection() {
 
           </div>
 
-          {/* ─── Right Column: Dashboard Mockup Window Bezel from Screenshot 3 ─── */}
-          <div className="lg:col-span-7 relative">
+          {/* ─── Right Column: Dashboard Mockup Window Bleeding Flush to the Right Edge ─── */}
+          <div className="w-full lg:flex-1 flex justify-end items-start pr-0 overflow-visible">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative w-full"
+              className="relative w-full min-w-0 lg:min-w-[680px] xl:min-w-[820px] 2xl:min-w-[960px] mr-0"
             >
-              {/* Dashboard Tablet Preview from User Screenshot 1 */}
+              {/* Dashboard Tablet Preview Flush to the Right Edge */}
               <div className="relative rounded-tl-[36px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.8)] border-l-4 border-t-4 border-slate-700/80 bg-white">
                 <img
                   src="/images/contact-dashboard-preview.jpg"
