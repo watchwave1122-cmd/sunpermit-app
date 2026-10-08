@@ -70,7 +70,7 @@ export default function SolarAnalyticsHero() {
       </div>
 
       {/* ─── Floating Top Pill Navbar (Matches Screenshot) ─── */}
-      <header className="relative z-30 pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <header className="relative z-30 pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1440px] mx-auto">
         <nav className="bg-white/90 backdrop-blur-md border border-slate-200/80 rounded-2xl shadow-sm px-5 sm:px-8 py-3.5 flex items-center justify-between transition-all">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
@@ -97,12 +97,12 @@ export default function SolarAnalyticsHero() {
         </nav>
       </header>
 
-      {/* ─── Main Hero Content: Exactly Matches Screenshot Alignment ─── */}
-      <main className="relative z-10 w-full pl-6 sm:pl-10 md:pl-16 lg:pl-20 xl:pl-28 pr-0 pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full">
+      {/* ─── Main Hero Content: Responsive & Balanced Spacing ─── */}
+      <main className="relative z-10 w-full max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-8 sm:pt-12 pb-14 sm:pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-10 xl:gap-14 w-full">
           
           {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
-          <div className="w-full lg:w-[480px] xl:w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
+          <div className="w-full lg:max-w-[480px] xl:max-w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
             
             {/* Main Headline (Clean responsive wrap, never isolates '&') */}
             <motion.h1 
@@ -148,13 +148,13 @@ export default function SolarAnalyticsHero() {
 
           </div>
 
-          {/* ─── Right Column: Black Dashboard Tablet Mockup Aligned Flush Right (Matches Screenshot) ─── */}
-          <div className="w-full lg:flex-1 flex justify-end items-center pr-0 sm:pr-4 lg:pr-0 overflow-visible">
+          {/* ─── Right Column: Black Dashboard Tablet Mockup ─── */}
+          <div className="w-full lg:flex-1 flex justify-center lg:justify-end items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[720px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[860px] ml-auto mr-0 lg:-mr-4 xl:mr-0"
+              className="relative w-full max-w-[620px] lg:max-w-[680px] xl:max-w-[760px] 2xl:max-w-[820px] ml-auto mr-0"
             >
               {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 2 */}
               <div className="relative rounded-[36px] p-2.5 sm:p-3.5 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.5)] border border-slate-700/80 ring-1 ring-white/10">
