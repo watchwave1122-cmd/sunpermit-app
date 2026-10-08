@@ -9,11 +9,11 @@ interface SunPermitLogoProps {
   height?: number;
 }
 
-export default function SunPermitLogo({ className = "", variant = "full", height = 50 }: SunPermitLogoProps) {
+export default function SunPermitLogo({ className = "", variant = "full", height }: SunPermitLogoProps) {
   if (variant === "icon") {
     return (
       <div className={`relative inline-flex items-center justify-center ${className}`}>
-        <svg viewBox="0 0 100 65" className="h-8 w-auto overflow-visible" fill="none">
+        <svg viewBox="0 0 100 65" style={height ? { height: `${height}px` } : undefined} className="h-8 w-auto overflow-visible" fill="none">
           {/* Sun Rays */}
           <path
             d="M 50,5 L 50,0 M 68,10 L 71,6 M 82,23 L 87,21 M 87,41 L 93,42 M 32,10 L 29,6 M 18,23 L 13,21 M 13,41 L 7,42"
@@ -47,11 +47,12 @@ export default function SunPermitLogo({ className = "", variant = "full", height
   }
 
   return (
-    <div className={`inline-flex items-center gap-2.5 select-none ${className}`}>
+    <div className="inline-flex items-center select-none">
       <img
         src="/images/sunpermit-logo.png"
         alt="SunPermit Logo"
-        className="h-9 w-auto object-contain drop-shadow-xs"
+        style={height ? { height: `${height}px` } : undefined}
+        className={`w-auto object-contain drop-shadow-xs ${height ? "" : "h-11 sm:h-12 md:h-14 lg:h-16"} ${className}`}
       />
     </div>
   );
