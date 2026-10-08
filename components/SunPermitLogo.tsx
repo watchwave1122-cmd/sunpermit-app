@@ -9,7 +9,7 @@ interface SunPermitLogoProps {
   height?: number;
 }
 
-export default function SunPermitLogo({ className = "", variant = "full", height = 36 }: SunPermitLogoProps) {
+export default function SunPermitLogo({ className = "", variant = "full", height = 50 }: SunPermitLogoProps) {
   if (variant === "icon") {
     return (
       <div className={`relative inline-flex items-center justify-center ${className}`}>
