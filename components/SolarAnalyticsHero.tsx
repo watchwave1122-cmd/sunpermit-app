@@ -97,12 +97,12 @@ export default function SolarAnalyticsHero() {
         </nav>
       </header>
 
-      {/* ─── Main Hero Content: Previous Exact Right-Edge Alignment (Fully Responsive) ─── */}
-      <main className="relative z-10 w-full pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-24 2xl:pl-28 pr-0 pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full">
+      {/* ─── Main Hero Content: Previous Alignment with Direct Tight Spacing (No Middle Void) ─── */}
+      <main className="relative z-10 w-full pl-6 sm:pl-10 md:pl-14 lg:pl-16 xl:pl-20 2xl:pl-24 pr-0 pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-center justify-start gap-8 lg:gap-10 xl:gap-14 w-full">
           
           {/* ─── Left Column: Headline, Subtitle, CTA & Trust Badges ─── */}
-          <div className="w-full lg:w-[480px] xl:w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
+          <div className="w-full lg:w-[460px] xl:w-[500px] 2xl:w-[520px] shrink-0 flex flex-col justify-center space-y-6 text-left">
             
             {/* Main Headline (Clean responsive wrap, never isolates '&') */}
             <motion.h1 
@@ -148,13 +148,13 @@ export default function SolarAnalyticsHero() {
 
           </div>
 
-          {/* ─── Right Column: Black Dashboard Tablet Mockup Placed Flush On Exact Right Edge ─── */}
-          <div className="w-full lg:flex-1 flex justify-center lg:justify-end items-center pr-0 sm:pr-4 lg:pr-0 overflow-visible">
+          {/* ─── Right Column: Black Dashboard Tablet Mockup Placed Directly Next to Text ─── */}
+          <div className="w-full lg:flex-1 flex justify-center lg:justify-start items-center pr-0 overflow-visible">
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              className="relative w-full max-w-[620px] sm:max-w-[700px] lg:max-w-[760px] xl:max-w-[820px] 2xl:max-w-[860px] mx-auto lg:ml-auto lg:mr-0 lg:-mr-4 xl:mr-0"
+              className="relative w-full max-w-[620px] sm:max-w-[700px] lg:max-w-none lg:w-[760px] xl:w-[860px] 2xl:w-[960px] shrink-0 mx-auto lg:mx-0"
             >
               {/* Sleek Tablet Frame with All 4 Rounded Corners Matching Screenshot 2 */}
               <div className="relative rounded-[36px] p-2.5 sm:p-3.5 bg-gradient-to-b from-slate-800 via-slate-900 to-black shadow-[0_30px_90px_rgba(0,0,0,0.5)] border border-slate-700/80 ring-1 ring-white/10">
