@@ -32,15 +32,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Determine site URL for redirects (detects Vercel/production domain automatically)
+    // Determine site URL for redirects (supports SITE_URL without public prefix, auto-detects Vercel/production domain)
+    const configuredSiteUrl = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL;
     const reqOrigin = req.headers.get("origin") || req.nextUrl.origin;
     const siteUrl =
-      (process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")
-        ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
+      (configuredSiteUrl && !configuredSiteUrl.includes("localhost")
+        ? configuredSiteUrl.replace(/\/$/, "")
         : null) ||
       (reqOrigin && !reqOrigin.includes("localhost") ? reqOrigin.replace(/\/$/, "") : null) ||
       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-      process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+      configuredSiteUrl?.replace(/\/$/, "") ||
       reqOrigin ||
       "http://localhost:3000";
 
