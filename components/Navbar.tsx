@@ -33,7 +33,7 @@ export default function Navbar() {
         
         {/* Official Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <SunPermitLogo height={38} />
+          <SunPermitLogo height={50} />
         </Link>
 
         {/* Desktop Navigation Links */}
