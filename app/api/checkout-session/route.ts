@@ -32,10 +32,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Determine site URL for redirects
+    // Determine site URL for redirects (detects Vercel/production domain automatically)
+    const reqOrigin = req.headers.get("origin") || req.nextUrl.origin;
     const siteUrl =
+      (process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")
+        ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "")
+        : null) ||
+      (reqOrigin && !reqOrigin.includes("localhost") ? reqOrigin.replace(/\/$/, "") : null) ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
       process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-      req.nextUrl.origin ||
+      reqOrigin ||
       "http://localhost:3000";
 
     // 3% merchant processing fee

@@ -25,15 +25,26 @@ export async function sendEmail({ to, subject, html, text }: SendEmailParams) {
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: smtpPort === 465,
-      auth: {
-        user: smtpUser,
-        pass: smtpPass,
-      },
-    });
+    const isGmail = smtpHost === "smtp.gmail.com" || smtpUser.endsWith("@gmail.com");
+    const transporter = nodemailer.createTransport(
+      isGmail
+        ? {
+            service: "gmail",
+            auth: {
+              user: smtpUser,
+              pass: smtpPass,
+            },
+          }
+        : {
+            host: smtpHost,
+            port: smtpPort,
+            secure: smtpPort === 465,
+            auth: {
+              user: smtpUser,
+              pass: smtpPass,
+            },
+          }
+    );
 
     const info = await transporter.sendMail({
       from: process.env.SMTP_FROM || `"SunPermit Notifications" <${smtpUser}>`,
